@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Project.master.cs" Inherits="ProjectASP.Project" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table border="1">
+            <tr>
+                <td colspan="2" style="text-align:right;">
+                      <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lbluser" runat="server"></asp:Label>
+                        
+                        &nbsp;&nbsp;&nbsp;<asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" />
+                    
+                      </h4>
+                    &nbsp;&nbsp;
+                    
+                </td>
+                </tr>
+            <tr>
+                
+                <td style="width:1700px;height:600px;">
+                    <asp:ContentPlaceHolder ID="ProjectMaster" runat="server">
+                          
+                    </asp:ContentPlaceHolder>
+                    
+                </td>
+                </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <h1>Footer</h1>
+                    </td>
+            </tr>
+
+            
+        </table>
+        
+        
+    </div>
+    </form>
+</body>
+</html>
