@@ -41,7 +41,7 @@ namespace ProjectASP
 
 
                 
-                Response.Redirect("QnOne.aspx");
+                Response.Redirect("QuestionPage.aspx");
             }
                 
 

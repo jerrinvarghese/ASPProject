@@ -110,6 +110,7 @@
     <Content Include="QnOne.aspx" />
     <Content Include="QnThree.aspx" />
     <Content Include="QnTwo.aspx" />
+    <Content Include="QuestionPage.aspx" />
     <Content Include="Result.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="QnTwo.aspx.designer.cs">
       <DependentUpon>QnTwo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionPage.aspx.cs">
+      <DependentUpon>QuestionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuestionPage.aspx.designer.cs">
+      <DependentUpon>QuestionPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Result.aspx.cs">
       <DependentUpon>Result.aspx</DependentUpon>
