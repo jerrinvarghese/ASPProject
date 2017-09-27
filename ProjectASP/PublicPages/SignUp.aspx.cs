@@ -36,7 +36,7 @@ namespace ProjectASP
             cmd.Parameters.AddWithValue("@uname", name);
             cmd.Parameters.AddWithValue("@upswd", pswd);
             cmd.ExecuteNonQuery();
-            Response.Redirect("LoginPage.aspx");
+            Response.Redirect("~/LoginPage.aspx");
 
         }
     }

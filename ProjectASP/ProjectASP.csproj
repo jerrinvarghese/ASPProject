@@ -98,7 +98,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\SignIn.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Image\leed-practice-exam.jpg" />
+    <Content Include="Image\omr.jpg" />
     <Content Include="MultiViewQuestions.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -120,7 +123,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="ResultPage.aspx" />
+    <Content Include="TestDesign.aspx" />
     <Content Include="WebForm4.aspx" />
+    <Content Include="Design.Master" />
+    <Content Include="PublicPages\Web.config" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -140,12 +147,19 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="SignUp.aspx" />
+    <Content Include="PublicPages\SignUp.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design.Master.cs">
+      <DependentUpon>Design.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Design.Master.designer.cs">
+      <DependentUpon>Design.Master</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,12 +238,26 @@
     <Compile Include="Result.aspx.designer.cs">
       <DependentUpon>Result.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.aspx.cs">
+    <Compile Include="ResultPage.aspx.cs">
+      <DependentUpon>ResultPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultPage.aspx.designer.cs">
+      <DependentUpon>ResultPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicPages\SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SignUp.aspx.designer.cs">
+    <Compile Include="PublicPages\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestDesign.aspx.cs">
+      <DependentUpon>TestDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestDesign.aspx.designer.cs">
+      <DependentUpon>TestDesign.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

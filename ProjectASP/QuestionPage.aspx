@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Project.Master" AutoEventWireup="true" CodeBehind="QuestionPage.aspx.cs" Inherits="ProjectASP.QuestionPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ProjectMaster" runat="server">
+    <style type="text/css">
+        .bgimage{
+            background-color:white;
+          }
+    </style>
+    <div class="bgimage">
+        <asp:Button ID="btnStart" class="btn btn-success" runat="server" Text="Start" OnClick="btnStart_Click" />
     <asp:MultiView ID="MultiView1" runat="server">
         <asp:View ID="Qn1" runat="server">
             <p>Qn 1. How many states are there in India?</p>
@@ -12,7 +19,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn1" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn1" runat="server" Text="Previous" OnClick="btnPreviousQn1_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnNextQn1" runat="server" OnClick="btnNextQn1_Click" Text="Next" />
             </p>
@@ -26,7 +33,7 @@
             </asp:RadioButtonList>
                 </p>
             <p>
-                <asp:Button ID="btnPreviousQn2" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn2" runat="server" Text="Previous" OnClick="btnPreviousQn2_Click" />
                 &nbsp;
                 <asp:Button ID="btnNextQn2" runat="server" OnClick="btnNextQn2_Click" Text="Next" />
                 </p>
@@ -45,7 +52,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn3" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn3" runat="server" Text="Previous" OnClick="btnPreviousQn3_Click" />
                 &nbsp;
                 <asp:Button ID="btnNextQn3" runat="server" Text="Next" OnClick="btnNextQn3_Click" />
             </p>
@@ -61,7 +68,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn4" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn4" runat="server" Text="Previous" OnClick="btnPreviousQn4_Click" />
                 &nbsp;
                 <asp:Button ID="btnNextQn4" runat="server" Text="Next" OnClick="btnNextQn4_Click" />
             </p>
@@ -77,7 +84,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn5" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn5" runat="server" Text="Previous" OnClick="btnPreviousQn5_Click" />
                 &nbsp;
                 <asp:Button ID="btnNextQn5" runat="server" Text="Next" OnClick="btnNextQn5_Click" />
             </p>
@@ -93,7 +100,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn6" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn6" runat="server" Text="Previous" OnClick="btnPreviousQn6_Click" />
                 &nbsp;
                 <asp:Button ID="btnNextQn6" runat="server" Text="Next" OnClick="btnNextQn6_Click" />
             </p>
@@ -109,7 +116,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn7" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn7" runat="server" Text="Previous" OnClick="btnPreviousQn7_Click" />
                 &nbsp;
                <asp:Button ID="btnNextQn7" runat="server" Text="Next" OnClick="btnNextQn7_Click" />
             </p>
@@ -125,7 +132,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn8" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn8" runat="server" Text="Previous" OnClick="btnPreviousQn8_Click" />
                 &nbsp;
                <asp:Button ID="btnNextQn8" runat="server" Text="Next" OnClick="btnNextQn8_Click" />
             </p>
@@ -141,7 +148,7 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn9" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn9" runat="server" Text="Previous" OnClick="btnPreviousQn9_Click" />
                 &nbsp;
                <asp:Button ID="btnNextQn9" runat="server" Text="Button" OnClick="btnNextQn9_Click" />
             </p>
@@ -157,10 +164,11 @@
             <p>
                 &nbsp;</p>
             <p>
-                <asp:Button ID="btnPreviousQn10" runat="server" Text="Previous" />
+                <asp:Button ID="btnPreviousQn10" runat="server" Text="Previous" OnClick="btnPreviousQn10_Click" />
                 &nbsp;
                <asp:Button ID="btnNextQn10" runat="server" Text="Next" OnClick="btnNextQn10_Click" />
             </p>
         </asp:View>
     </asp:MultiView>
+        </div>
 </asp:Content>

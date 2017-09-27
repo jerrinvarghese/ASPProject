@@ -5,42 +5,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/SignIn.css" rel="stylesheet" />
+    <style type="text/css">
+        .headfoot{
+            width:1170px;
+            height:100px;
+            background-color:grey;
+        }
+        .headercontent{
+            float:right;
+            margin-right:5px;
+            
+
+        }
+
+        .labelstyle{
+            margin-top:7px;
+            padding-right:15px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <table border="1">
-            <tr>
-                <td colspan="2" style="text-align:right;">
-                      <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lbluser" runat="server"></asp:Label>
-                        
-                        &nbsp;&nbsp;&nbsp;<asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" />
-                    
-                      </h4>
-                    &nbsp;&nbsp;
-                    
-                </td>
-                </tr>
-            <tr>
+    <div class="container">
+        <div class="row headfoot">
+            <h4>
+                <asp:Button ID="btnLogout" runat="server" class="btn btn-success headercontent" OnClick="btnLogout_Click" Text="Logout" />
+              
+                <asp:Label ID="lbluser" CssClass="labelstyle headercontent" runat="server"></asp:Label>
+              </h4>
+              
+        </div>
+        
+        <div class="row">
+           <div class="col-md-12" style="width:1170px;height:600px;border-color:black;border-style:solid; border-width:1px;">
+               <asp:ContentPlaceHolder ID="ProjectMaster" runat="server">
+                         
+               </asp:ContentPlaceHolder>
+           </div>
+         </div>      
+         
+         <div class="row headfoot">
                 
-                <td style="width:1700px;height:600px;">
-                    <asp:ContentPlaceHolder ID="ProjectMaster" runat="server">
-                          
-                    </asp:ContentPlaceHolder>
-                    
-                </td>
-                </tr>
-            <tr>
-                <td colspan="2" style="text-align:center;">
-                    <h1>Footer</h1>
-                    </td>
-            </tr>
-
-            
-        </table>
-        
-        
+         </div>
     </div>
     </form>
 </body>
