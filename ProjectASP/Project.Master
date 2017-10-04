@@ -19,7 +19,13 @@
             
 
         }
-
+        .contentStyle{
+            width:1170px;
+            height:400px;
+            border-style:solid;
+            border-width:1px;
+            border-color:black;
+        }
         .labelstyle{
             margin-top:7px;
             padding-right:15px;
@@ -28,28 +34,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="container">
-        <div class="row headfoot">
-            <h4>
+        <div class="container">
+            <div class="well well-lg" style="height:100px;">
+
                 <asp:Button ID="btnLogout" runat="server" class="btn btn-success headercontent" OnClick="btnLogout_Click" Text="Logout" />
-              
                 <asp:Label ID="lbluser" CssClass="labelstyle headercontent" runat="server"></asp:Label>
-              </h4>
-              
+            </div>
+            <div class="row" style="width:1200px;height:600px;padding-top:50px;">
+                <asp:ContentPlaceHolder ID="ProjectMaster" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="row" style="width:1200px;height:90px;background-color:gray;">
+
+            </div>
+            
         </div>
-        
-        <div class="row">
-           <div class="col-md-12" style="width:1170px;height:600px;border-color:black;border-style:solid; border-width:1px;">
-               <asp:ContentPlaceHolder ID="ProjectMaster" runat="server">
-                         
-               </asp:ContentPlaceHolder>
-           </div>
-         </div>      
-         
-         <div class="row headfoot">
-                
-         </div>
-    </div>
     </form>
 </body>
 </html>

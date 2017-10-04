@@ -22,6 +22,15 @@ namespace ProjectASP {
         protected global::System.Web.UI.WebControls.Button btnStart;
         
         /// <summary>
+        /// lblQnException control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQnException;
+        
+        /// <summary>
         /// MultiView1 control.
         /// </summary>
         /// <remarks>
@@ -47,15 +56,6 @@ namespace ProjectASP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rdbtnQn1;
-        
-        /// <summary>
-        /// btnPreviousQn1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPreviousQn1;
         
         /// <summary>
         /// btnNextQn1 control.

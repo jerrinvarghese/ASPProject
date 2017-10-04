@@ -17,45 +17,62 @@ namespace ProjectASP
         DataTable dt = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=SUYPC070;Initial Catalog=ASPProject;User Id=sa;Password=Suyati123");
-            con.Open();
+            //Initializing the connection at page load itself
+            try
+            {
+                con = new SqlConnection("Data Source=SUYPC070;Initial Catalog=ASPProject;User Id=sa;Password=Suyati123");
+                con.Open();
+            }
+            catch(Exception ex)
+            {
+                lblLoginException.Text = ex.Message;
+            }
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            var uname = txtUserName.Text;
-            var pwd = txtPswd.Text;
-            cmd = new SqlCommand("sp_loginProject", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@username", uname);
-            cmd.Parameters.AddWithValue("@pswd", pwd);
-            ad = new SqlDataAdapter(cmd);
-            ad.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
+            //Authenticating user name and password using stored procedure.
+            //Based on successful authentication, the page is redirected to the Question page.
+            try
             {
-                var userid = Convert.ToInt16(dr["UserId"]);
-                var name = dr["UserName"].ToString();
-                var password = dr["UserPassword"].ToString();
-                
-                Session["user"] = name;
-                Session["uid"] = userid;
+                var uname = txtUserName.Text;
+                var pwd = txtPswd.Text;
+                cmd = new SqlCommand("sp_loginProject", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", uname);
+                cmd.Parameters.AddWithValue("@pswd", pwd);
+                ad = new SqlDataAdapter(cmd);
+                ad.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    var userid = Convert.ToInt16(dr["UserId"]);
+                    var name = dr["UserName"].ToString();
+                    var password = dr["UserPassword"].ToString();
+                    var usts = dr["userstatus"].ToString();
 
+                    Session["user"] = name;
+                    Session["uid"] = userid;
 
-                
-                Response.Redirect("QuestionPage.aspx");
+                    if (usts == "T")
+                    {
+                        Response.Write("<script>alert('Already attempted')</script>");
+                    }
+                    else
+                    {
+                        Response.Redirect("QuestionPage.aspx");
+                    }
+                }
             }
-                
-
-
-
-
+            catch (Exception ex)
+            {
+                lblLoginException.Text = ex.Message;
+            }
         }
-
+                    
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             txtUserName.Text = "";
             txtPswd.Text = "";
         }
-
         
     }
 }

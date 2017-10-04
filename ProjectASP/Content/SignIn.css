@@ -1,5 +1,6 @@
 ﻿.bodyClass {
     background-image:url("/Image/omr.jpg");
+    background-repeat:no-repeat;
 }
 
 .signUpBackground{
