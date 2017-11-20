@@ -357,63 +357,103 @@ namespace ProjectASP
             {
                 var usts = "T";
                 var QnSelected1 = rdbtnQn1.SelectedValue;
-                if (QnSelected1 != null)
+                if (QnSelected1 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 1, QnSelected1);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 1, "NA");
+                }
 
-                var QnSelected2 = rdbtnQn2.SelectedItem.Value;
-                if (QnSelected2 != null)
+                var QnSelected2 = rdbtnQn2.SelectedValue;
+                if (QnSelected2 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 2, QnSelected2);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 2, "NA");
+                }
 
-                var QnSelected3 = rdbtnQn3.SelectedItem.Value;
-                if (QnSelected3 != null)
+                var QnSelected3 = rdbtnQn3.SelectedValue;
+                if (QnSelected3 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 3, QnSelected3);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 3, "NA");
+                }
 
-                var QnSelected4 = rdbtnQn4.SelectedItem.Value;
-                if (QnSelected4 != null)
+                var QnSelected4 = rdbtnQn4.SelectedValue;
+                if (QnSelected4 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 4, QnSelected4);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 4, "NA");
+                }
 
-                var QnSelected5 = rdbtnQn5.SelectedItem.Value;
-                if (QnSelected5 != null)
+                var QnSelected5 = rdbtnQn5.SelectedValue;
+                if (QnSelected5 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 5, QnSelected5);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 5, "NA");
+                }
 
-                var QnSelected6 = rdbtnQn6.SelectedItem.Value;
-                if (QnSelected6 != null)
+                var QnSelected6 = rdbtnQn6.SelectedValue;
+                if (QnSelected6 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 6, QnSelected6);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 6, "NA");
+                }
 
-                var QnSelected7 = rdbtnQn7.SelectedItem.Value;
-                if (QnSelected7 != null)
+                var QnSelected7 = rdbtnQn7.SelectedValue;
+                if (QnSelected7 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 7, QnSelected7);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 7, "NA");
+                }
 
-                var QnSelected8 = rdbtnQn8.SelectedItem.Value;
-                if (QnSelected8 != null)
+                var QnSelected8 = rdbtnQn8.SelectedValue;
+                if (QnSelected8 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 8, QnSelected8);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 8, "NA");
+                }
 
-                var QnSelected9 = rdbtnQn9.SelectedItem.Value;
-                if (QnSelected9 != null)
+                var QnSelected9 = rdbtnQn9.SelectedValue;
+                if (QnSelected9 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 9, QnSelected9);
                 }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 9, "NA");
+                }
 
-                var QnSelected10 = rdbtnQn10.SelectedItem.Value;
-                if (QnSelected10 != null)
+                var QnSelected10 = rdbtnQn10.SelectedValue;
+                if (QnSelected10 != "")
                 {
                     InsertResult(Convert.ToInt16(Session["uid"]), 10, QnSelected10);
+                }
+                else
+                {
+                    InsertResult(Convert.ToInt16(Session["uid"]), 10, "NA");
                 }
                 SqlCommand cmdUpdateResult = new SqlCommand("update ASPProjecttbl set userstatus='" + usts + "' where UserId='" + Session["uid"] + "'", con);
                 cmdUpdateResult.ExecuteNonQuery();
@@ -422,7 +462,7 @@ namespace ProjectASP
             }
             catch(Exception ex)
             {
-                lblQnException.Text = ex.Message;
+                lblQnException.Text = ex.Message+ " " + ex.StackTrace;
             }
 
 
